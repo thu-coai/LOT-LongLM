@@ -26,7 +26,7 @@ We design LOT as an aggregation of two understanding tasks including Cloze Test 
 
 We show the data statistics in the table below. The abbreviation **sent**/**len** is short for **sentence**/**length**, respectively.  The datasets and evaluation scripts can be downloaded from [THUCloud](https://cloud.tsinghua.edu.cn/d/0cf033b0c7c049be855d/).
 
-<img src="./figure/dataset.png" style="zoom:40%;" />
+<img src="./figure/dataset.png" style="zoom:100%;" />
 
 
 
@@ -34,7 +34,7 @@ We show the data statistics in the table below. The abbreviation **sent**/**len*
 
 ### 1. Parameters
 
-<img src="./figure/param.png" style="zoom:50%;" />
+<img src="./figure/param.png" style="zoom:100%;" />
 
 - $d_m$: the dimension of hidden states
 - $d_{ff}$: the dimension of feed forward layers
@@ -46,7 +46,7 @@ We show the data statistics in the table below. The abbreviation **sent**/**len*
 
 ### 2. Pretraining Tasks
 
-<img src="./figure/pretrain_task.png" style="zoom:50%;" />
+<img src="./figure/pretrain_task.png" style="zoom:100%;" />
 
 ### 3. Pretraining Data
 

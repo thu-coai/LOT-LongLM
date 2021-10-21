@@ -1,5 +1,7 @@
 export NCCL_DEBUG=INFO
 deepspeed  \
+    --hostfile=./hostfile \
+    --include="gpu-zeus:1,2" \
     finetune_trainer.py \
     --data_dir=./data \
     --train_name=train \

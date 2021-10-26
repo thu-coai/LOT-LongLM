@@ -64,8 +64,6 @@ We collect 120G novels as the pretraining data for LongLM. The pretraining data 
    model = T5ForConditionalGeneration.from_pretrained('LongLM-large')
    ```
 
-   - Dependencies: torch=1.8.1, transformers=4.6.1
-
 3. **Training:**
 
    Execute `bash ./finetune.sh` to fine-tune LongLM. If deepspeed is available, you can execute `bash ./finetune_deepspped.sh` to accelerate.
@@ -100,7 +98,33 @@ We collect 120G novels as the pretraining data for LongLM. The pretraining data 
    gen = model.generate(input_ids, do_sample=True, decoder_start_token_id=1, top_p=0.9, max_length=512)
    ```
 
-   
+
+### 5. Dependencies
+
+```
+datasets                1.6.2
+deepspeed               0.3.16
+huggingface-hub         0.0.8
+jieba                   0.42.1
+jsonlines               2.0.0
+nltk                    3.5
+numpy                   1.19.5
+pytorch-lightning       1.2.0
+regex                   2020.11.13
+rouge                   1.0.1
+rouge-score             0.0.4
+sacrebleu               1.5.0
+scipy                   1.5.4
+sentencepiece           0.1.95
+tokenizers              0.10.1
+torch                   1.8.1
+torchaudio              0.8.0
+torchmetrics            0.2.0
+torchvision             0.9.0
+transformers            4.6.1
+```
+
+
 
 ## Baselines
 

@@ -54,19 +54,19 @@ We collect 120G novels as the pretraining data for LongLM. The pretraining data 
 
 ### 4. Checkpoints
 
-1. **Download:** The checkpoints and example data can be downloaded from [THUCloud](https://cloud.tsinghua.edu.cn/d/576f340a43964a23b1a5/). The training and generation scripts are under the directory `longlm`. You can also use the [official script](https://github.com/huggingface/transformers/tree/v4.6.0-release/examples/legacy/seq2seq) provided by Transformers to fine-tune the model.
+1. **Download:** The checkpoints and example data can be downloaded from [THUCloud](https://cloud.tsinghua.edu.cn/d/576f340a43964a23b1a5/) or [Hugging Face Model Card](https://huggingface.co/thu-coai). The training and generation scripts are under the directory `longlm`. 
 
 2. **Model Loading:** 
 
    ```python\
    from transformers import T5Tokenizer, T5ForConditionalGeneration
-   tokenizer = T5Tokenizer.from_pretrained('LongLM-large')
-   model = T5ForConditionalGeneration.from_pretrained('LongLM-large')
+   tokenizer = T5Tokenizer.from_pretrained('thu-coai/LongLM-large')
+   model = T5ForConditionalGeneration.from_pretrained('thu-coai/LongLM-large')
    ```
 
 3. **Training:**
 
-   Execute `bash ./finetune.sh` to fine-tune LongLM. If deepspeed is available, you can execute `bash ./finetune_deepspped.sh` to accelerate.
+   Execute `bash ./finetune.sh` to fine-tune LongLM. If deepspeed is available, you can execute `bash ./finetune_deepspped.sh` to accelerate. You can also use the [official script](https://github.com/huggingface/transformers/tree/v4.6.0-release/examples/legacy/seq2seq) provided by Transformers to fine-tune the model.
 
    ```shell
    env CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 CUDA_LAUNCH_BLOCKING=1 python3 -m torch.distributed.launch --nproc_per_node=8 \

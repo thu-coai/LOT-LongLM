@@ -50,7 +50,7 @@ We show the data statistics in the table below. The abbreviation **sent**/**len*
 
 ### 3. Pretraining Data
 
-We collect 120G novels as the pretraining data for LongLM. The pretraining data will be publicly available soon.
+We collect 120G novels as the pretraining data for LongLM. Part of the pretraining data are [publicly available](https://cloud.tsinghua.edu.cn/d/a5a16f2381e7439eb475/).
 
 ### 4. Checkpoints
 
